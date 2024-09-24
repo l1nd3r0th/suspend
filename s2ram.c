@@ -58,7 +58,7 @@ int s2ram_check_kms(void)
 		return errno;
 
 	while ((dentry = readdir(sysfs_dir))) {
-		if (!strncmp(dentry->d_name, "card0-", 6)) {
+		if (!strncmp(dentry->d_name, "card", 4)) {
 			ret = 0;
 			break;
 		}
